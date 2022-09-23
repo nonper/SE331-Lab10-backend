@@ -46,16 +46,16 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .telNo("202-555-0175")
                 .build());
         par3= participantRepository.save(Participant.builder()
-                .name("Abdallah Key")
-                .telNo("202-555-0175")
+                .name("Jacque Travers")
+                .telNo("202-555-0165")
                 .build());
         par4= participantRepository.save(Participant.builder()
-                .name("Abdallah Key")
-                .telNo("202-555-0175")
+                .name("Damien Valencia")
+                .telNo("202-555-0172")
                 .build());
         par5= participantRepository.save(Participant.builder()
-                .name("Abdallah Key")
-                .telNo("202-555-0175")
+                .name("Nico Trejo")
+                .telNo("202-555-0113")
                 .build());
         Event tempEvent;
         tempEvent = eventRepository.save(Event.builder()
@@ -70,7 +70,11 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         tempEvent.setOrganizer(org1);
         org1.getOwnEvents().add(tempEvent);
         tempEvent.getParticipants().add(par1);
+        tempEvent.getParticipants().add(par2);
+        tempEvent.getParticipants().add(par3);
         par1.getEventHistory().add(tempEvent);
+        par2.getEventHistory().add(tempEvent);
+        par3.getEventHistory().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .category("Academic")
                 .title("Commencement Day")
@@ -83,8 +87,10 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         tempEvent.setOrganizer(org1);
         tempEvent.getParticipants().add(par1);
         tempEvent.getParticipants().add(par2);
+        tempEvent.getParticipants().add(par5);
         par1.getEventHistory().add(tempEvent);
         par2.getEventHistory().add(tempEvent);
+        par5.getEventHistory().add(tempEvent);
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .category("Cultural")
@@ -96,6 +102,12 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .petAllowed(false)
                 .build());
         tempEvent.setOrganizer(org2);
+        tempEvent.getParticipants().add(par1);
+        tempEvent.getParticipants().add(par3);
+        tempEvent.getParticipants().add(par4);
+        par1.getEventHistory().add(tempEvent);
+        par3.getEventHistory().add(tempEvent);
+        par4.getEventHistory().add(tempEvent);
         org2.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .category("Cultural")
@@ -107,6 +119,12 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .petAllowed(true)
                 .build());
         tempEvent.setOrganizer(org3);
+        tempEvent.getParticipants().add(par4);
+        tempEvent.getParticipants().add(par2);
+        tempEvent.getParticipants().add(par3);
+        par4.getEventHistory().add(tempEvent);
+        par2.getEventHistory().add(tempEvent);
+        par3.getEventHistory().add(tempEvent);
         org3.getOwnEvents().add(tempEvent);
     }
 }

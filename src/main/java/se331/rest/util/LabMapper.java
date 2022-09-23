@@ -17,7 +17,7 @@ public interface LabMapper {
 
     List<OrganizerDTO> getOrganizerDTO(List<Organizer> organizers);
 
-    Participant getParticipantDTO (Participant participant);
+    ParticipantDTO getParticipantDTO (Participant participant);
 
-    List<Participant> getParticipantDTO (List<Participant> participants);
+    List<ParticipantDTO> getParticipantDTO (List<Participant> participants);
 }

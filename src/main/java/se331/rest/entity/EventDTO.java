@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Builder
@@ -21,4 +23,5 @@ public class EventDTO {
     String time;
     Boolean petAllowed;
     EventOrganizerDTO organizer;
+    List<ParticipantDTO> participantDTOList = new ArrayList<>();
 }

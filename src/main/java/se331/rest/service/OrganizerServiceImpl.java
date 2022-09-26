@@ -6,7 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import se331.rest.entity.Organizer;
-import se331.rest.entity.OrganizerDao;
+import se331.rest.dao.OrganizerDao;
 
 import java.util.List;
 

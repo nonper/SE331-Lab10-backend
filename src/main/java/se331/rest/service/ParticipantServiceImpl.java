@@ -6,7 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import se331.rest.entity.Participant;
-import se331.rest.entity.ParticipantDao;
+import se331.rest.dao.ParticipantDao;
 
 import java.util.List;
 

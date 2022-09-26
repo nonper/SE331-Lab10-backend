@@ -6,10 +6,9 @@ import org.springframework.stereotype.Service;
 import se331.rest.dao.EventDao;
 import se331.rest.entity.Event;
 import se331.rest.entity.Organizer;
-import se331.rest.entity.OrganizerDao;
+import se331.rest.dao.OrganizerDao;
 
 import javax.transaction.Transactional;
-import java.util.List;
 
 @Service
 public class EventServiceImpl implements EventService {
